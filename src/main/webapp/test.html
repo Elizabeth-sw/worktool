@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>学科网帐号登录</title>
+<meta name="_csrf" content="" />
+<meta name="_csrf_header" content="" />
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="css/body.css?v=1" />
+<link rel="stylesheet" type="text/css" href="css/sso_login.css?v=1" />
+<link rel="stylesheet" type="text/css" href="css/login.css?v=1" />
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.md5.min.js"></script>
+<style type="text/css">
+.wrap-login-top, .publicNumber {
+	display: none;
+}
+</style>
+<link rel="stylesheet" href="/css/cas.css" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<script type="text/javascript">
+	window.contextPath = '/'.split(';')[0];
+	window.openId = "";
+	window.clientName = "";
+	var mobileLoginTab = "";
+	var errorCount = "";
+</script>
+<script type="text/javascript" src="js/lib/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/login-dialog-new.js"></script>
+<script type="text/javascript">
+	$(function() {
+		setTimeout(function() {
+			dingTop();
+		}, 100);
+		window.onresize = function() {
+			dingTop();
+		}
+		var dingTop = function() {
+			$(".top")
+					.css(
+							{
+								"margin-top" : ($(window).height() - ($(".top")
+										.height()
+										+ $(".center").height() + $(".footer")
+										.height())) / 2 - 10
+							});
+			if ($(".top").offset().top <= 0) {
+				$(".top").css({
+					"margin-top" : "0px"
+				});
+				return;
+			} else {
+				return;
+			}
+		};
+		try {
+			var parentUrl = document.referrer;
+			if (parentUrl.indexOf("goxiangba.com") > -1)
+				top.location.href = window.location.href;
+		} catch (e) {
+		}
+	});
+</script>
+<script type="text/javascript">
+	$(function() {
+		function s155097905132() {
+			$('#s155097905113').val('s26155097905160');
+		}
+		function s15509790513() {
+			$('#s155097905130').val('s48155097905152');
+		}
+		function s155097905118() {
+			$('#s155097905159').val('s57155097905159');
+		}
+		function s155097905122() {
+			$('#s155097905129').val('s31155097905146');
+		}
+		function s155097905120() {
+			$('#s155097905159').val('s53155097905133');
+		}
+		function s15509790519() {
+			$('#s155097905149').val('s1155097905160');
+		}
+		$("#CommonLogin").on("mouseenter", function() {
+			try {
+				s155097905137();
+			} catch (e) {
+			}
+			s155097905132();
+			console.log('');
+		});
+		$(".username").blur(function() {
+			try {
+				s155097905137();
+			} catch (e) {
+			}
+			s155097905132();
+			console.log('');
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="top">
+		<div class="cten">
+			<!-- <a href="http://www.zxxk.com/">  -->
+			<a href="http://www.zxxk.com" target="_self"><img
+				src="images/logo125.png"></a>
+			<!-- </a> <span>帐号登录</span> -->
+		</div>
+	</div>
+	<div class="center">
+		<div class="cten">
+			<div class="wrap">
+				<div class="wrap-list">
+					<div class="wrap-login-top">
+						<img src="images/logo.gif" alt="logo"> <span></span>
+					</div>
+					<div class="header">
+						<a href="javascript:history.go(-1)" class="Fl header-left"></a> <span>登录</span>
+					</div>
+					<div class="wrap-login-center">
+						<h3>
+							<label class="Fl"><span class="login_ordinary"
+								id="login_ordinary">普通登录</span></label> <label class="Fr"><span
+								class="login_phone" id="login_phone"
+								style="color: rgb(153, 153, 153);">手机动态码登录</span></label> <span
+								class="evr"></span>
+						</h3>
+						<form id="ordinaryLoginForm" name="loginForm" class="F1"
+							action="/login" method="post">
+							<div class="Prompt"></div>
+							<ul class="wrap-login-list" id="ordinaryLoginTab">
+								<li class="li_top">
+									<div class="userName">
+										<input id="username" name="username" class="text username"
+											tabindex="1" placeholder="手机号/邮箱/用户名" type="text" value=""
+											maxlength="40" autocomplete="off" />
+									</div>
+								</li>
+								<li class="li_top">
+									<div class="password">
+										<input type="password" class="text psd" maxlength="24"
+											tabindex="2" name="password" placeholder="密码" /> <span
+											style="right: 0px;">A</span>
+									</div>
+								</li>
+								<li><input type="submit" class="btn" id="CommonLogin"
+									value="登录" /></li>
+							</ul>
+							<input type="hidden" name="lt"
+								value="LT-408283-fiJmzKalRcfcQKOfteYM-sso3.zxxk.com" /> <input
+								type="hidden" name="execution"
+								value="475bd771-f3de-43ac-a7d1-96f917e7afe3_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuWVRCcmNWRjJORGd4YjNwR09IZ3ZabE13U0VGVlJYSmlORUpqVVdneE5sTTNaWGxXUm1GdmFqVlVTbVZOZVZCa1dtZzRTVXhpZGpOck1HaFVNRTR4VkRJdlkwOVpSM0JuSzIxeGJGUnROVWh1TnpscWRqbHJiSEJHYzNJM1ZqSlFOMmRyTkVrclFsb3dkMlZLYkNzelVrdHpOU3RyWnpWbGNHOW5RMlJtY0ZaR1JYWXZXRmcwWjFSTlpYcFJjMVJwTWxGcGR6VlFMMWRMTDFaSFQzQTRTRUp2Uml0U2JHdHNjVVpJWmtwaVlrMVNUSGh2YVdFMFMzRlVLMHhRTTFwRk5qSXJiSFZRWmtWbmVVczFVR3hHUzB4R2FEZHFiSFZTTmtkQ09VTkZTRVJ0VERaNll6WmFOVXBDTTNZM1VYbzBVazVSSzBObU1uSjJlbm93VGs1SmFtRjBWR2MwUTA0eGFtdElTek0wVFRKUVVuRlhWMVZaVTJ4dVVXZEZNMW96V1VkUU0wRmpTM2hCVm5vMU1WbzRVek5sUlhoT1YwbEpjblJxTm04elpuaDFRMVV2ZUZNeVpqbENVWFI1UmpWaFJuZFZSRWxGVG1WRWQyMTZTVWxOY1dGT09VVjVTMDFUVGpWaWJHWTNSVFV4TkROcmVGSkNSMnBGS3pVMVdFRm9lRFZHYzNCbWFWQjJVSEpvZEhCeVRtcHBRbkJHZFdjNVZESjZha280TkZOTVQwMXpZbFpGZDJOblptdFhkalZFV1VFeFJuSjRTMWRTTW1rMGQxQTFhR1JLZVdsUFoxcE1UMkZtVVdwVlJUVlJjbUp3Y0ZRNWFVOXRkVTlzTmpOSFlXaEJXRVY2VlRWRk5WQm9SblZFTkRoa2VEaHdla2RvV0RWMWRrVjZVSGswTkhkeVRYbzNTREprYVcxeEt6bElOMEp1UldoMlFraG5USGRzZGxZd1dteDFjMHc0WkM5S2NUaE9SVE5ZTWtSSmJrUTFRM1p4YmpkdVdTdHljbFJzU1hkU1lWVm9hbk5zTnpNMlpWSnlWM0p3ZDNkc01HMVFXR05yU1ZGMk16Sm5kVVphWlU1RFpIbE9aRlppYVhGWmNUUllXRVIzTVVaT2VFaHNkR0ZpVVV4M00wWjJVek5aVDBoSWFEQnZOMVkxVUdWSWVWZG9UMmR3VjI1MFNqQkxjMjk1V2tSWGRteFpaVTFHUkc0eGR6aDFWV0pOWjFWSlMxSkxRekJLYzFseFNtNTBMeXMxTHpCcVoxRk1jalJuYUZkalJsSnpObWhYTkdaNmVpODVTRlpOZDNvMFN6bGlRa3BoUXpGeVZHWlVhVGh1VUVScFpWWXpSVE40VkhkWlYxTnhiMjl2WkZOM1VUVmpNMWxhTkRGNllsUk1RbmRHU213eFZETnRjVnBWWTJWR05UTlJlRzU2U25NeU5rUTJWazF3U1hSTldXVXhaRzVOZG01TFIzbEpSbkpTYTBGTFptUXZWekExUjBoTFFtYzJTamxZTkhoSlUzTkhjM292V2pOaWRuZHpTV2RrTDJKQ1kxQlBRVVVyVkV0Vk4ydDRMMEo0WlRKS1ZtUktWRTVuSzAxbk1USXJWMnBPVDJ0WE0yMXdXRVpWVFRSQlFuaE9lbFZwTkRRMWN6azVOV3RvY1daeFNXOWhha0pyYWtNMWNVNVpOMDFLUkZwRVkxWk9XRWRhVUVFMGFVdE5abXM0TkdRM1EzUTBUa3RQVlVGTWVtRkRNMDExYVdaV01sbDFUVlppYmpaVVpqQlphMlpGTURrMFl6SmFSVEkxVVVSM1UwbEZSRzlSTDFCaUwwVnVLM2g1ZGpOV1Z6UXZjbmRuU0U4M04waDRSa2xyZVhOR1EwSlNhM2xsZFhwSVJVNUVNRzFtZGsxcmNuRkhia2swUzFoR05GRXlPVnA0T0RNek9VbFRNWFJZU1hGblVVSjBiMDlLY0VaTGFucFVkVTVpWW5KSmRXUk1TbkE1UVdkbFlqTkpPRWt4YTFORFEyRndSMXBDWVhaVU5IbHZlQzh2TDBKV2JuTmlPVllyZG1adWVFeExTWFV2VkVoSFlsWTRUa2xEUVRkR1NsWlJkVEJzTmk5R1pucFFWSGQwTjB3eU1XdGtVVzl3YzBsc2VVVmhibU5yWVZCdFVYWjNkVWxNTVZFMkswVlBhVWd3ZDFoWlZFNXpUekJLTkVWUVVGQktWbTQyUmt4bmVVY3pNSEk0VmxkUWR6SjZhRFJaYW1wTFpXRk1LM0pWYzJod1l5czBjV1ozWjBsRWJXWnFhazByUldSd2VtWkZjRFYzTjBGRmMybE1SMkpSVGtScVZHcDRPRUo1T0RoRFlXRk5UMlJ6Y3l0NlUyZFdRV1ZpVlhZeU4zcDFWMjg0YmxwRWEzZG9jWE53VjFCdllrWlpNemxMZFRKWlkwMDRWbUp0VGpKRVVGaGpjRkowYTJsdGNrYzFNR0VyWkRSUU5HcGpNRnB3UzNSalVrRmxSbmhJVURkdlMySXpWbGcxZGtadFRTOUlja2h2Y2k5SlpsZzJjRTl3WjIxa1FXYzRlRzVJUzBaTU5HSjFkVE5DYzFGcWVEVnRZMnRrUkRWVFNWWkNlRWRDUTBGclFrMVpXRmxuTVZGR09VMVdLemw0VlN0WlpqUTBjMjl5VjFaNmJETnNRVmh4UmtKT2F5czRUakZJYWpGVmNtUkRNemNyVm1zMmNDODVkWFF5Vml0V1QwTnhXRTEwYzJwdWVpOUxaMFV2YlhCaU5FOUNkMDR3WXpOTmN6SmtOa3BLT0ZaRFQySjNOVWhLYkhwUlRVMWtRVVF2V2poMlluTlBTMkYwVFhCRk5rWjRUMHhGY1ZSVk1tdE1XRUpZU25WeGIzRjBiRU5FVDJ0d1FrSktWRVkwZUdwMVpIcFRZVVpXUlRsaVYzWklhREo1UjBGamNUYzJlRTF0YzBkb1pWbE5OVnA2TmtsaVptTTVaMEY1V0ZscldWTXZVbkF4ZEhCSE1tRlBRalZLVDJvMlR6QnRlVll2ZDFWYVRrcGlRV0pWUW5aRmRVUTNaalF5YkZjNFRIVkZZMnRZVVVWUVlrNTFkRE4zUlM5NVYxaDFOblZ2WjA1emR6ZEJVSGgwSzI5VFRITkNjbG8yUkd0a1pFRllXWEpLVmtaVFVVNUtTRFZQTVVaclJYTkthM00yVDFneGNYQkJXVmMyWWs5Tk1UQk1XbWg2ZFRac1VuaGlWbWRMVW5Rdk5rSTNlVEJvWWxGTldpOVRjbms0YWxvdlNsSllZbFV6WnpWV1dXWm1SVTB3TTJFM1JWTktRbEpoUzBsMVpEZEtkVVZXTVN0VGRUWjZkelJHT0hCWlREUnZjRzAwYW5KVWRVSlplREpaU1RCVE9IRTFhMFF3Y2poQ2JUVnBRekpFZUdKMmRXWmpaamw0VmxSNGFWbE5PRFl3TUZRelNXUkRVVEF3VmpoTFZWUkNjV1ZMYzNKT05rbGllWGQzVERWWVl6aG5kblJyVUhSWFFWQjFNa1F4WjNOT1JtcFRlbk5pZEU1YVEwMUJiVFZaTDFGQmNtUTFLMDg0Um1WRldEY3JNbmxpVkVkRFZGSXlSMU5PSzAxalNIbHVXRmR4VW1adVlqZ3pRazFHWmpkaFVqZG5aVEpDWTA5QllqQXhkblJ3ZDAxVllVNHZSVTlGYjNaamVWaG1SbFpTY0ZwaGNrWlFObXR0T0VOTVRXTlNUbTV0ZUZWNGVGRktOMjVxYzJaV1dtSm1WbTlZVFVjeFMxcHhlbUZDTUVsNlJFZElXa2cyY2pGVVpHTm5PSFY2YVRsWmNuRnNXbEpWU1VWVGJVaFdNMWxaTW5aM1NXc3ZWMjFOYjJsMU1rZEpURVpvZVdSeFNIaFRhRWtyVDJKTU9XbEJkVkJrY1VOSlVrWjZSek5hUjBReFdESjVWaXQwTTBKU01EVXpURlExVHpaaGJIbExTMDVHVjNsTGNsQmxTbUZqVTBsTkswNTBURGM1WWs5cmRFaFNVbHBhUWl0WUszUkRPSEpwVXpKb01rRjJhMnRIYmxNd01tTlZUR3hrT0ZSa09UQklXR1I0VlRkVE5VSXhTM1l2UW1KTVRXRndaVWxvUVZrM1pXcHlkMUJFVWtob2FYTldNR1ZUUjNoQ1VHZ3pRVzEyWld4NlVTdDJUMFV2TDJwa0wzWnNWbkZqVDJselFVWnBSRUpoZG5wWVlVNXROVVl2TlVoeGIwdEhPV2hUZHpVeE1IQkpNVmRpWTFCT1Z6RnVNazFHV0dvMmJFNUJNR2REVkVkcVEwNDNWSEJ6YTFGWFJVbHdjV2RCZUVaeE5qVktNa05VVTNkUVIyY3ZjVnBEU0Vsa2FVSkVaRlZ4Tm1vNU5sVnRhRWxWYVZKT1dVcHRORFY0Vm5WQldGQnVjMFJ0SzNGV1dFNXdkbUoyZW5JelFWWkJWazlwVWxOSFdsRmFhVlJ6TWxWaVJUbFFSbmRGVDJKMmJrZEpTR1p0UWpNMk5sQklOVTlhU1d0T1ExVnRUVmx5V0U5T2NGUm1aemhVWVRGWlluTlVhM2haTkdFeE5rUkxUMWhUTkZRclNXNHhSRWRUTmpaU00xZFlkbVZEWjNaMFFrbGFTSFpxTURKMVN6RkxNUzlGUkhGQk5qWnBWVmczUTJFNVlYUTJXa1pGZEdSdGJVSjFTbTlrZEZGVFZFNUtSRWhxV0RKVlVGbERaWEZxTDFaalUzUTJkemhXWmtWcFEyUk9XV3BoVjFsdlVFUnJRM2RwWTBGVGRUQXhNVU4xTUhGWWRHazJURTVaWVRkNFYyODBWRGRNVDFaVFNHWnlNVU16YjBWV1VFZFliV0V3WkZRelZTdGllbnBoTlRGNGFXVTJTRFp5V1dWdVJrZFhVa2xIWkZkWFVYUm9hMEZIZERWVVVreGxkemxqVWt0VFZVcGFSM0JNYmxONlowWXpkV1ZzWms5WmFGVXhOa3R6U2twTFIydFpNalUwWkdWNWRFRkdNRzFsTVVoU1RFbDZWVFJCVlZsQmR6QkdRWGRSYjAxME9FSmFORTEwWVVoME1uTnBXaXMzZVhNNWNWWXJiREJTWldSTVkwUkhVRmxSVjFCMlEwbEplbVZtZUZjeFVXRnZabU42UjBST2VVUmFhSHBVUTBreFdFWk5OeXRoU21KamQwaEJSMVJaUWxCR1RWZDZUelJxVFU5NlJ6Vm5WelZ2WVdndk1GRjFTRlY0UkRsME1HcFdWbWRCWW5KVk5HMDNjbVZFZW5VeFVFeGxXbmhNY1RaNFpFbFljRGRIT0VoUWJXYzNjVVZvWkVOemRsRlhkRWxPZHpZMlptY3pkemR4TURKbk9IbHljVFEyZEVOdldEVjBXRlpFWlhGQlppOUJTVWt5ZEVwRFNtWXJiV1ZQYUM5SmNEUktaSHB5Vm1KUmNFeFZUSFpGU2xGRWNEaEdkRzQzVjFwUU5rVnJSalJpYjNSVVpESk1kejA5LmxFdHBPZzBURUN6OG5WalZoOGpJWE02NzNEa1FORXZOV3JzQVotaUkwUER4UmVINF8wbkF0S2pHRE1IOVVPYW9wZzNGWlFGNmhET2h3RDlJaW9vYVR3" />
+							<input type="hidden" name="_eventId" value="submit" /> <input
+								type="hidden" name="rememberMe" value="true" /> <input
+								type="hidden" id="s155097905113" name="xkw_d" value="" />
+						</form>
+						<form id="mobileLoginForm" name="loginMsgForm" class="F1"
+							style="display: none" action="/login" method="post">
+							<div class="Prompt" id="phoneResult"></div>
+							<ul class="wrap-login-list" id="phoneLoginTab">
+								<!-- <li><div class="phone-name"><input type="text" class="text phone" placeholder="手机" name="mobile"></div></li> -->
+								<li class="li_top">
+									<div class="phone-name">
+										<input id="mobileInput" name="mobile" class="text phone"
+											tabindex="6" placeholder="手机号" type="text" value=""
+											maxlength="11" autocomplete="off" />
+									</div>
+								</li>
+								<li class="img_verification li_top" style="display: block;"
+									id="mobileLoginCode">
+									<div class="phone-psd phone-verification">
+										<input type="text" class="text psd" maxlength="4" tabindex="7"
+											placeholder="图形验证码" name="captcha" />
+									</div> <img src="captcha.png" alt=""
+									onClick="this.src='captcha.png?r='+Math.random();"
+									title="看不清,点击刷新." />
+								</li>
+								<li class="li_top">
+									<div class="phone-psd">
+										<input type="text" id="mobileCode" class="text psd"
+											maxlength="6" tabindex="8" placeholder="短信验证码"
+											name="mobileCode" />
+									</div> <input type="button" class="verification" value="获取验证码 " />
+								</li>
+								<li><input class="btn" type="submit" id="MobilePhoneLogin"
+									value="登录" /></li>
+							</ul>
+							<input type="hidden" name="lt"
+								value="LT-408283-fiJmzKalRcfcQKOfteYM-sso3.zxxk.com" /> <input
+								type="hidden" name="execution"
+								value="475bd771-f3de-43ac-a7d1-96f917e7afe3_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuWVRCcmNWRjJORGd4YjNwR09IZ3ZabE13U0VGVlJYSmlORUpqVVdneE5sTTNaWGxXUm1GdmFqVlVTbVZOZVZCa1dtZzRTVXhpZGpOck1HaFVNRTR4VkRJdlkwOVpSM0JuSzIxeGJGUnROVWh1TnpscWRqbHJiSEJHYzNJM1ZqSlFOMmRyTkVrclFsb3dkMlZLYkNzelVrdHpOU3RyWnpWbGNHOW5RMlJtY0ZaR1JYWXZXRmcwWjFSTlpYcFJjMVJwTWxGcGR6VlFMMWRMTDFaSFQzQTRTRUp2Uml0U2JHdHNjVVpJWmtwaVlrMVNUSGh2YVdFMFMzRlVLMHhRTTFwRk5qSXJiSFZRWmtWbmVVczFVR3hHUzB4R2FEZHFiSFZTTmtkQ09VTkZTRVJ0VERaNll6WmFOVXBDTTNZM1VYbzBVazVSSzBObU1uSjJlbm93VGs1SmFtRjBWR2MwUTA0eGFtdElTek0wVFRKUVVuRlhWMVZaVTJ4dVVXZEZNMW96V1VkUU0wRmpTM2hCVm5vMU1WbzRVek5sUlhoT1YwbEpjblJxTm04elpuaDFRMVV2ZUZNeVpqbENVWFI1UmpWaFJuZFZSRWxGVG1WRWQyMTZTVWxOY1dGT09VVjVTMDFUVGpWaWJHWTNSVFV4TkROcmVGSkNSMnBGS3pVMVdFRm9lRFZHYzNCbWFWQjJVSEpvZEhCeVRtcHBRbkJHZFdjNVZESjZha280TkZOTVQwMXpZbFpGZDJOblptdFhkalZFV1VFeFJuSjRTMWRTTW1rMGQxQTFhR1JLZVdsUFoxcE1UMkZtVVdwVlJUVlJjbUp3Y0ZRNWFVOXRkVTlzTmpOSFlXaEJXRVY2VlRWRk5WQm9SblZFTkRoa2VEaHdla2RvV0RWMWRrVjZVSGswTkhkeVRYbzNTREprYVcxeEt6bElOMEp1UldoMlFraG5USGRzZGxZd1dteDFjMHc0WkM5S2NUaE9SVE5ZTWtSSmJrUTFRM1p4YmpkdVdTdHljbFJzU1hkU1lWVm9hbk5zTnpNMlpWSnlWM0p3ZDNkc01HMVFXR05yU1ZGMk16Sm5kVVphWlU1RFpIbE9aRlppYVhGWmNUUllXRVIzTVVaT2VFaHNkR0ZpVVV4M00wWjJVek5aVDBoSWFEQnZOMVkxVUdWSWVWZG9UMmR3VjI1MFNqQkxjMjk1V2tSWGRteFpaVTFHUkc0eGR6aDFWV0pOWjFWSlMxSkxRekJLYzFseFNtNTBMeXMxTHpCcVoxRk1jalJuYUZkalJsSnpObWhYTkdaNmVpODVTRlpOZDNvMFN6bGlRa3BoUXpGeVZHWlVhVGh1VUVScFpWWXpSVE40VkhkWlYxTnhiMjl2WkZOM1VUVmpNMWxhTkRGNllsUk1RbmRHU213eFZETnRjVnBWWTJWR05UTlJlRzU2U25NeU5rUTJWazF3U1hSTldXVXhaRzVOZG01TFIzbEpSbkpTYTBGTFptUXZWekExUjBoTFFtYzJTamxZTkhoSlUzTkhjM292V2pOaWRuZHpTV2RrTDJKQ1kxQlBRVVVyVkV0Vk4ydDRMMEo0WlRKS1ZtUktWRTVuSzAxbk1USXJWMnBPVDJ0WE0yMXdXRVpWVFRSQlFuaE9lbFZwTkRRMWN6azVOV3RvY1daeFNXOWhha0pyYWtNMWNVNVpOMDFLUkZwRVkxWk9XRWRhVUVFMGFVdE5abXM0TkdRM1EzUTBUa3RQVlVGTWVtRkRNMDExYVdaV01sbDFUVlppYmpaVVpqQlphMlpGTURrMFl6SmFSVEkxVVVSM1UwbEZSRzlSTDFCaUwwVnVLM2g1ZGpOV1Z6UXZjbmRuU0U4M04waDRSa2xyZVhOR1EwSlNhM2xsZFhwSVJVNUVNRzFtZGsxcmNuRkhia2swUzFoR05GRXlPVnA0T0RNek9VbFRNWFJZU1hGblVVSjBiMDlLY0VaTGFucFVkVTVpWW5KSmRXUk1TbkE1UVdkbFlqTkpPRWt4YTFORFEyRndSMXBDWVhaVU5IbHZlQzh2TDBKV2JuTmlPVllyZG1adWVFeExTWFV2VkVoSFlsWTRUa2xEUVRkR1NsWlJkVEJzTmk5R1pucFFWSGQwTjB3eU1XdGtVVzl3YzBsc2VVVmhibU5yWVZCdFVYWjNkVWxNTVZFMkswVlBhVWd3ZDFoWlZFNXpUekJLTkVWUVVGQktWbTQyUmt4bmVVY3pNSEk0VmxkUWR6SjZhRFJaYW1wTFpXRk1LM0pWYzJod1l5czBjV1ozWjBsRWJXWnFhazByUldSd2VtWkZjRFYzTjBGRmMybE1SMkpSVGtScVZHcDRPRUo1T0RoRFlXRk5UMlJ6Y3l0NlUyZFdRV1ZpVlhZeU4zcDFWMjg0YmxwRWEzZG9jWE53VjFCdllrWlpNemxMZFRKWlkwMDRWbUp0VGpKRVVGaGpjRkowYTJsdGNrYzFNR0VyWkRSUU5HcGpNRnB3UzNSalVrRmxSbmhJVURkdlMySXpWbGcxZGtadFRTOUlja2h2Y2k5SlpsZzJjRTl3WjIxa1FXYzRlRzVJUzBaTU5HSjFkVE5DYzFGcWVEVnRZMnRrUkRWVFNWWkNlRWRDUTBGclFrMVpXRmxuTVZGR09VMVdLemw0VlN0WlpqUTBjMjl5VjFaNmJETnNRVmh4UmtKT2F5czRUakZJYWpGVmNtUkRNemNyVm1zMmNDODVkWFF5Vml0V1QwTnhXRTEwYzJwdWVpOUxaMFV2YlhCaU5FOUNkMDR3WXpOTmN6SmtOa3BLT0ZaRFQySjNOVWhLYkhwUlRVMWtRVVF2V2poMlluTlBTMkYwVFhCRk5rWjRUMHhGY1ZSVk1tdE1XRUpZU25WeGIzRjBiRU5FVDJ0d1FrSktWRVkwZUdwMVpIcFRZVVpXUlRsaVYzWklhREo1UjBGamNUYzJlRTF0YzBkb1pWbE5OVnA2TmtsaVptTTVaMEY1V0ZscldWTXZVbkF4ZEhCSE1tRlBRalZLVDJvMlR6QnRlVll2ZDFWYVRrcGlRV0pWUW5aRmRVUTNaalF5YkZjNFRIVkZZMnRZVVVWUVlrNTFkRE4zUlM5NVYxaDFOblZ2WjA1emR6ZEJVSGgwSzI5VFRITkNjbG8yUkd0a1pFRllXWEpLVmtaVFVVNUtTRFZQTVVaclJYTkthM00yVDFneGNYQkJXVmMyWWs5Tk1UQk1XbWg2ZFRac1VuaGlWbWRMVW5Rdk5rSTNlVEJvWWxGTldpOVRjbms0YWxvdlNsSllZbFV6WnpWV1dXWm1SVTB3TTJFM1JWTktRbEpoUzBsMVpEZEtkVVZXTVN0VGRUWjZkelJHT0hCWlREUnZjRzAwYW5KVWRVSlplREpaU1RCVE9IRTFhMFF3Y2poQ2JUVnBRekpFZUdKMmRXWmpaamw0VmxSNGFWbE5PRFl3TUZRelNXUkRVVEF3VmpoTFZWUkNjV1ZMYzNKT05rbGllWGQzVERWWVl6aG5kblJyVUhSWFFWQjFNa1F4WjNOT1JtcFRlbk5pZEU1YVEwMUJiVFZaTDFGQmNtUTFLMDg0Um1WRldEY3JNbmxpVkVkRFZGSXlSMU5PSzAxalNIbHVXRmR4VW1adVlqZ3pRazFHWmpkaFVqZG5aVEpDWTA5QllqQXhkblJ3ZDAxVllVNHZSVTlGYjNaamVWaG1SbFpTY0ZwaGNrWlFObXR0T0VOTVRXTlNUbTV0ZUZWNGVGRktOMjVxYzJaV1dtSm1WbTlZVFVjeFMxcHhlbUZDTUVsNlJFZElXa2cyY2pGVVpHTm5PSFY2YVRsWmNuRnNXbEpWU1VWVGJVaFdNMWxaTW5aM1NXc3ZWMjFOYjJsMU1rZEpURVpvZVdSeFNIaFRhRWtyVDJKTU9XbEJkVkJrY1VOSlVrWjZSek5hUjBReFdESjVWaXQwTTBKU01EVXpURlExVHpaaGJIbExTMDVHVjNsTGNsQmxTbUZqVTBsTkswNTBURGM1WWs5cmRFaFNVbHBhUWl0WUszUkRPSEpwVXpKb01rRjJhMnRIYmxNd01tTlZUR3hrT0ZSa09UQklXR1I0VlRkVE5VSXhTM1l2UW1KTVRXRndaVWxvUVZrM1pXcHlkMUJFVWtob2FYTldNR1ZUUjNoQ1VHZ3pRVzEyWld4NlVTdDJUMFV2TDJwa0wzWnNWbkZqVDJselFVWnBSRUpoZG5wWVlVNXROVVl2TlVoeGIwdEhPV2hUZHpVeE1IQkpNVmRpWTFCT1Z6RnVNazFHV0dvMmJFNUJNR2REVkVkcVEwNDNWSEJ6YTFGWFJVbHdjV2RCZUVaeE5qVktNa05VVTNkUVIyY3ZjVnBEU0Vsa2FVSkVaRlZ4Tm1vNU5sVnRhRWxWYVZKT1dVcHRORFY0Vm5WQldGQnVjMFJ0SzNGV1dFNXdkbUoyZW5JelFWWkJWazlwVWxOSFdsRmFhVlJ6TWxWaVJUbFFSbmRGVDJKMmJrZEpTR1p0UWpNMk5sQklOVTlhU1d0T1ExVnRUVmx5V0U5T2NGUm1aemhVWVRGWlluTlVhM2haTkdFeE5rUkxUMWhUTkZRclNXNHhSRWRUTmpaU00xZFlkbVZEWjNaMFFrbGFTSFpxTURKMVN6RkxNUzlGUkhGQk5qWnBWVmczUTJFNVlYUTJXa1pGZEdSdGJVSjFTbTlrZEZGVFZFNUtSRWhxV0RKVlVGbERaWEZxTDFaalUzUTJkemhXWmtWcFEyUk9XV3BoVjFsdlVFUnJRM2RwWTBGVGRUQXhNVU4xTUhGWWRHazJURTVaWVRkNFYyODBWRGRNVDFaVFNHWnlNVU16YjBWV1VFZFliV0V3WkZRelZTdGllbnBoTlRGNGFXVTJTRFp5V1dWdVJrZFhVa2xIWkZkWFVYUm9hMEZIZERWVVVreGxkemxqVWt0VFZVcGFSM0JNYmxONlowWXpkV1ZzWms5WmFGVXhOa3R6U2twTFIydFpNalUwWkdWNWRFRkdNRzFsTVVoU1RFbDZWVFJCVlZsQmR6QkdRWGRSYjAxME9FSmFORTEwWVVoME1uTnBXaXMzZVhNNWNWWXJiREJTWldSTVkwUkhVRmxSVjFCMlEwbEplbVZtZUZjeFVXRnZabU42UjBST2VVUmFhSHBVUTBreFdFWk5OeXRoU21KamQwaEJSMVJaUWxCR1RWZDZUelJxVFU5NlJ6Vm5WelZ2WVdndk1GRjFTRlY0UkRsME1HcFdWbWRCWW5KVk5HMDNjbVZFZW5VeFVFeGxXbmhNY1RaNFpFbFljRGRIT0VoUWJXYzNjVVZvWkVOemRsRlhkRWxPZHpZMlptY3pkemR4TURKbk9IbHljVFEyZEVOdldEVjBXRlpFWlhGQlppOUJTVWt5ZEVwRFNtWXJiV1ZQYUM5SmNEUktaSHB5Vm1KUmNFeFZUSFpGU2xGRWNEaEdkRzQzVjFwUU5rVnJSalJpYjNSVVpESk1kejA5LmxFdHBPZzBURUN6OG5WalZoOGpJWE02NzNEa1FORXZOV3JzQVotaUkwUER4UmVINF8wbkF0S2pHRE1IOVVPYW9wZzNGWlFGNmhET2h3RDlJaW9vYVR3" />
+							<input type="hidden" name="_eventId" value="submit" /> <input
+								type="hidden" name="methodType" value="2" /> <input
+								type="hidden" name="username" value="******" /> <input
+								type="hidden" name="password" value="******" /> <input
+								type="hidden" name="rememberMe" value="true" />
+						</form>
+						<div class="Other">
+							<h4>
+								<span>使用其他方式登录</span>
+								<div>&nbsp;</div>
+							</h4>
+							<div class="oth">
+								<a
+									href="https://graph.qq.com/oauth2.0/authorize?client_id=100322479&redirect_uri=https%3A%2F%2Fsso.zxxk.com%2Flogin%3Fclient_name%3DQqClient&state=Vw437zF87t&response_type=code&scope=get_user_info"
+									target="_parent" class="QQ"></a> <a
+									href="https://open.weixin.qq.com/connect/qrconnect?appid=wxfec7bedae0c0eff9&redirect_uri=https%3A%2F%2Fsso.zxxk.com%2Flogin%3Fclient_name%3DWeixinClient&state=9hUGWyEx0w&response_type=code&scope=snsapi_login#wechat_redirect"
+									target="_parent" class="WeChat"></a> <a
+									href="https://api.weibo.com/oauth2/authorize?client_id=601029709&redirect_uri=https%3A%2F%2Fsso.zxxk.com%2Flogin%3Fclient_name%3DSinaClient&state=9Zt0nTLa6z&scope="
+									target="_parent" class="Sina"></a>
+							</div>
+						</div>
+						<ul class="wrap-login-list">
+							<li class="automatic t_c" id="links"><span
+								id="forgetPwdTags"><a href="/user/findPassword"
+									class="color_gray">忘记密码？</a> <b>|&nbsp;</b></span> <a
+								href="/user/signup" class="color_gray">免费注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="cten">
+			<p>Copyright ©2003-2016 All Rights Reserved. 学科网版权所有
+				京ICP备12013499</p>
+			<p>北京市公安局海淀分局备案号：1101081948 京ICP证080135号</p>
+		</div>
+	</div>
+</body>
+</html>
